@@ -1,7 +1,4 @@
 # QuestNavigasiMVVM_0024 - Praktikum Pertemuan 6
-
-Proyek aplikasi Android berbasis **Jetpack Compose** untuk penugasan mata kuliah **Pengembangan Aplikasi Mobile (PAM) - Pertemuan 6**. Proyek ini mengimplementasikan alur navigasi formulir isian biodata (**FormIsian**) menuju layar hasil (**TampilData**) menggunakan pengelola navigasi (**Navigasi**) dengan kepatuhan manajemen resource Android (`dimens.xml`, `strings.xml`, `colors.xml`).
-
 ---
 
 ## 👤 Identitas Mahasiswa
