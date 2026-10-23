@@ -5,8 +5,8 @@ Proyek aplikasi Android berbasis **Jetpack Compose** untuk penugasan mata kuliah
 ---
 
 ## 👤 Identitas Mahasiswa
-- **Nama:** wpiskaa
-- **NIM:** 20220140024 (0024)
+- **Nama:** Hafiz Kurniawan
+- **NIM:** 20220140024
 - **Mata Kuliah:** Pengembangan Aplikasi Mobile (PAM)
 - **Topik:** Pertemuan 6 - Quest Navigasi MVVM (Form Isian Jetpack Compose)
 - **Repository:** [https://github.com/wpiskaa/QuestNavigasiMVVM_0024.git](https://github.com/wpiskaa/QuestNavigasiMVVM_0024.git)
@@ -57,7 +57,4 @@ Aplikasi ini menggunakan komponen Material 3 modern dalam Jetpack Compose:
 
 ---
 
-## 📸 Dokumentasi / Preview Antarmuka
-
-<img width="1917" height="1078" alt="Preview Tampilan Formulir Isian PAM 6" src="https://github.com/user-attachments/assets/313d54a2-fec9-4861-9e25-490b1d7b2b72" />
-<img width="1917" height="1078" alt="Preview Struktur Kode Formulir Compose" src="https://github.com/user-attachments/assets/529f4b4a-32de-429b-b841-c78985df7c12" />
+## Dokumentasi / Preview Antarmuka
