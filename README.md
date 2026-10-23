@@ -1,6 +1,4 @@
 # QuestNavigasiMVVM_0024 - Praktikum Pertemuan 6
----
-
 ## 👤 Identitas Mahasiswa
 - **Nama:** Hafiz Kurniawan
 - **NIM:** 20220140024
