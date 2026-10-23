@@ -36,7 +36,7 @@ import com.example.pertemuan6.R
 @Composable
 fun FormIsian(
     jenisK: List<String> = listOf("Laki-laki", "Perempuan"),
-    OnSubmitBtnClick: () -> Unit,
+    OnSubmitBtnClick: (List<String>) -> Unit = {},
     modifier: Modifier = Modifier
 ){
     var textNama by remember { mutableStateOf("") }
@@ -104,7 +104,9 @@ fun FormIsian(
             Button(
                 modifier = Modifier.fillMaxWidth(fraction= 1f)
                     .padding(all = 25.dp),
-                onClick = OnSubmitBtnClick
+                onClick = {
+                    OnSubmitBtnClick(listOf(textNama, textJK, textAlamat))
+                }
             ){
                 Text(stringResource(id = R.string.submit))
             }
