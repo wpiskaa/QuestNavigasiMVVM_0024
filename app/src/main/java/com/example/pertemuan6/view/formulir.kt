@@ -1,12 +1,20 @@
 package com.example.pertemuan6.view
 
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.stringResource
+import com.example.pertemuan6.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -18,4 +26,16 @@ fun FormIsian(
     var textNama by remember { mutableStateOf("") }
     var textJK by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }
+
+    Scaffold(
+        modifier = modifier,
+        topBar = {
+            TopAppBar(
+                title = { Text(stringResource(id = R.string.home), color = Color.White) },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = colorResource(id = R.color.teal_700)
+                )
+            )
+        }
+    ){}
 }
