@@ -56,5 +56,6 @@ Aplikasi ini memiliki 2 layar utama yang dikelola oleh `Navigasi.kt`:
 
 ## 📸 Dokumentasi / Preview Antarmuka
 
-<img width="1917" height="1078" alt="Preview Form Isian" src="https://github.com/user-attachments/assets/313d54a2-fec9-4861-9e25-490b1d7b2b72" />
-<img width="1917" height="1078" alt="Preview Tampilan Hasil dan Navigasi" src="https://github.com/user-attachments/assets/529f4b4a-32de-429b-b841-c78985df7c12" />
+<img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/b61a4f25-3662-434c-9a5e-8ed0901c2b37" />
+<img width="1080" height="2400" alt="image" src="https://github.com/user-attachments/assets/b37f5815-c61d-4814-9ef2-98fe72419fe9" />
+
