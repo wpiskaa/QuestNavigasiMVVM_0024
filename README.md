@@ -1,6 +1,6 @@
 # QuestNavigasiMVVM_0024 - Praktikum Pertemuan 6
 
-Proyek aplikasi Android berbasis **Jetpack Compose** untuk penugasan mata kuliah **Pengembangan Aplikasi Mobile (PAM) - Pertemuan 6**. Proyek ini mengimplementasikan tata letak formulir isian biodata (**FormIsian**) yang disusun secara terstruktur dengan manajemen resource Android (`dimens.xml`, `strings.xml`, `colors.xml`).
+Proyek aplikasi Android berbasis **Jetpack Compose** untuk penugasan mata kuliah **Pengembangan Aplikasi Mobile (PAM) - Pertemuan 6**. Proyek ini mengimplementasikan alur navigasi formulir isian biodata (**FormIsian**) menuju layar hasil (**TampilData**) menggunakan pengelola navigasi (**Navigasi**) dengan kepatuhan manajemen resource Android (`dimens.xml`, `strings.xml`, `colors.xml`).
 
 ---
 
@@ -8,33 +8,30 @@ Proyek aplikasi Android berbasis **Jetpack Compose** untuk penugasan mata kuliah
 - **Nama:** Hafiz Kurniawan
 - **NIM:** 20220140024
 - **Mata Kuliah:** Pengembangan Aplikasi Mobile (PAM)
-- **Topik:** Pertemuan 6 - Quest Navigasi MVVM (Form Isian Jetpack Compose)
+- **Topik:** Pertemuan 6 - Quest Navigasi MVVM (Form Isian & Tampil Data Jetpack Compose)
 - **Repository:** [https://github.com/wpiskaa/QuestNavigasiMVVM_0024.git](https://github.com/wpiskaa/QuestNavigasiMVVM_0024.git)
 
 ---
 
-## 📱 Fitur dan Komponen Antarmuka (UI Components)
+## 📱 Alur Layar dan Komponen Antarmuka (UI Components)
 
-Aplikasi ini menggunakan komponen Material 3 modern dalam Jetpack Compose:
+Aplikasi ini memiliki 2 layar utama yang dikelola oleh `Navigasi.kt`:
 
-1. **TopAppBar & Scaffold**
-   - Menggunakan `Scaffold` sebagai fondasi tata letak.
-   - `TopAppBar` dengan judul formulir berbasis resource string (`R.string.home` = "Form Isian") dan latar belakang `R.color.teal_700`.
+1. **Layar 1: Form Isian (`formulir.kt`)**
+   - **Scaffold & TopAppBar:** Header aplikasi berlatar `R.color.teal_700` dengan judul `R.string.home` ("Form Isian").
+   - **Input Nama Lengkap (`OutlinedTextField`):** Field input nama dengan shape rounded (`MaterialTheme.shapes.large`).
+   - **Pilihan Jenis Kelamin (`RadioButton`):** Radio button horizontal untuk memilih `Laki-laki` atau `Perempuan`.
+   - **Input Alamat (`OutlinedTextField`):** Field input teks alamat terstandarisasi.
+   - **HorizontalDivider:** Garis pemisah antar field.
+   - **Tombol Submit (`Button`):** Mengirimkan data input ke pengelola navigasi dan berpindah ke layar `TampilData`.
 
-2. **Input Nama Lengkap (`OutlinedTextField`)**
-   - `OutlinedTextField` dengan rounded shape (`MaterialTheme.shapes.large`), lebar 250dp, dan label "Nama Lengkap".
+2. **Layar 2: Tampilan Data (`TampilData.kt`)**
+   - **Scaffold & TopAppBar:** Header aplikasi dengan judul `R.string.tampil` ("Tampilan").
+   - **Data Ringkasan:** Menampilkan kembali `NAMA LENGKAP`, `JENIS KELAMIN`, dan `ALAMAT` yang telah disubmit, dipisahkan oleh garis `HorizontalDivider` berwarna cyan.
+   - **Tombol Back (`Button`):** Tombol kembali menuju layar `FormIsian`.
 
-3. **Pemisah Antar Field (`HorizontalDivider`)**
-   - Garis pemisah horizontal dengan ketebalan `DividerDefaults.Thickness` / `1dp` dan warna `Color.Red`.
-
-4. **Pilihan Jenis Kelamin (`RadioButton`)**
-   - Pilihan radio dinamis berbasis list: `listOf("Laki-laki", "Perempuan")` dengan tata letak horizontal (`Row`).
-
-5. **Input Alamat (`OutlinedTextField`)**
-   - `OutlinedTextField` untuk isian alamat dengan ukuran terstandarisasi.
-
-6. **Tombol Kirim (`Button`)**
-   - Tombol "Submit" lebar penuh (`fillMaxWidth`) dengan teks berbasis string resource (`R.string.submit`).
+3. **Pengelola Navigasi (`Navigasi.kt`)**
+   - Menggunakan enum `PengelolaHalaman` (`Form` dan `Tampil`) untuk mengontrol transisi state tampilan serta menyalurkan data masukan formulir secara dinamis.
 
 ---
 
@@ -57,4 +54,7 @@ Aplikasi ini menggunakan komponen Material 3 modern dalam Jetpack Compose:
 
 ---
 
-## Dokumentasi / Preview Antarmuka
+## 📸 Dokumentasi / Preview Antarmuka
+
+<img width="1917" height="1078" alt="Preview Form Isian" src="https://github.com/user-attachments/assets/313d54a2-fec9-4861-9e25-490b1d7b2b72" />
+<img width="1917" height="1078" alt="Preview Tampilan Hasil dan Navigasi" src="https://github.com/user-attachments/assets/529f4b4a-32de-429b-b841-c78985df7c12" />
